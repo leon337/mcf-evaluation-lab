@@ -1,156 +1,147 @@
 # Pilot 001 — CASE CIAME
 
-## Status
+Status: **PLANEJADO / EXECUÇÃO BLOQUEADA**
 
-**PLANEJAMENTO**  
-**Execução MCF:** BLOQUEADA  
-**Condição de início:** LEANDRO declarar explicitamente que o MCF está pronto para trabalho real.
+## 1. Identidade
 
-## 1. Alvo correto
+O Pilot 001 será a primeira missão empresarial real utilizada para avaliar formalmente o MCF.
+
+Alvo:
 
 **CIAME — Centro Integrado de Atenção Médica**  
-**Local:** São Lourenço da Mata, Pernambuco, Brasil.
+São Lourenço da Mata/PE.
 
-Este piloto não se refere à empresa homônima de Aracaju/SE.
+O Case CIAME terá repositório próprio e separado do MCF e do Evaluation Lab.
 
-## 2. Objetivo do case
+## 2. Objetivos simultâneos
 
-Usar uma empresa real como:
+O Pilot 001 deverá produzir evidência para quatro perguntas diferentes:
 
-1. primeiro case comercial de transformação tecnológica;
-2. primeiro projeto real do MCF;
-3. teste operacional do framework;
-4. laboratório para desenvolver uma metodologia reutilizável de diagnóstico empresarial;
-5. fonte de dados para melhorar o MCF antes das próximas missões.
+1. o MCF consegue executar uma missão empresarial real com coordenação multiagente confiável?
+2. o trabalho produzido para a CIAME é tecnicamente, comercialmente e operacionalmente forte?
+3. quanto contexto inicial uma missão dessa classe precisa para funcionar bem?
+4. a complexidade do MCF gera benefício suficiente em relação a uma execução convencional?
 
-## 3. Estratégia de entrada comercial
+## 3. Avaliação oficial
 
-A intenção não é contatar a empresa imediatamente para perguntar do que ela precisa.
+O Pilot 001 será avaliado segundo o scorecard externo congelado em:
 
-O plano é primeiro construir:
+`docs/SCORECARD-v0.1.md`
 
-- diagnóstico profundo;
-- mapa de oportunidades;
-- proposta de transformação;
-- protótipos/demonstrações maduras;
-- evidências e business case;
-- pacote comercial de alto valor percebido.
+Estrutura obrigatória:
 
-Somente depois haverá contato comercial formal, condicionado a HUMAN_GATE de LEANDRO.
+- MCF SYSTEM SCORE — 0–100;
+- CASE OUTCOME SCORE — 0–100;
+- CRITICAL_GATES — PASS/FAIL;
+- Measurement Confidence — A/B/C/D;
+- Context Sufficiency metrics;
+- Human/Evaluator intervention metrics;
+- MCF Self-Assessment;
+- Calibration Gap;
+- FIELD OUTCOME separadamente, quando houver dados reais de campo.
 
-## 4. Blind Start do MCF
+O congelamento está registrado em:
 
-As pesquisas e conclusões produzidas por LEANDRO + Evaluator antes da missão não serão fornecidas como respostas ao MCF.
+`docs/checkpoints/CP-0002-SCORECARD-FREEZE.md`
 
-O MCF receberá uma missão inicial muito bem estruturada, mas deverá descobrir independentemente o estado real da CIAME.
+## 4. Princípio de missão limpa
 
-Princípio:
+O MCF não deverá receber como contexto inicial os diagnósticos, pesquisas ou conclusões produzidos anteriormente pelo Evaluator ou por LEANDRO sobre a CIAME.
 
-> Estruturar claramente o problema e o contrato da missão sem entregar o diagnóstico.
+A missão deverá ser muito bem estruturada, mas estrutura não significa fornecer respostas.
 
-## 5. Objetivo adicional — contexto inicial
+O Mission Contract deverá especificar pelo menos:
 
-Como este será o primeiro projeto real, o bootstrap da missão será deliberadamente mais estruturado.
+- objetivo;
+- alvo correto;
+- escopo;
+- resultado esperado;
+- restrições;
+- entregáveis;
+- fontes permitidas;
+- política de evidências;
+- limites de atuação;
+- HUMAN_GATE;
+- definição de pronto;
+- instrumentação mínima da missão.
 
-O piloto deverá medir quanto desse contexto foi necessário, suficiente, redundante ou ausente para, futuramente, definir um **MCF Mission Bootstrap Standard**.
+## 5. MCF consciente da avaliação
 
-## 6. Duas fases de conhecimento
+O MESTRE deverá saber explicitamente que:
 
-### Fase A — Blind
+- esta é uma missão real;
+- este é o primeiro piloto formal do MCF;
+- o framework e a equipe estão sendo avaliados;
+- o próprio MESTRE deve criar métricas internas e instrumentar a execução;
+- a autoavaliação será posteriormente comparada à avaliação externa.
 
-O MCF recebe apenas o contexto aprovado no Mission Contract e realiza investigação independente.
+O teste não é oculto.
 
-Não recebe:
+## 6. Interação com o MESTRE
 
-- diagnósticos anteriores;
-- conclusões deste chat;
-- dataset independente do Evaluator;
-- contatos históricos de LEANDRO;
-- hipóteses já levantadas.
+Durante a missão, a cadeia operacional planejada é:
 
-### Fase B — Human Augmented
+`Evaluator/LEANDRO_PROXY -> LEANDRO transporta -> MESTRE -> LEANDRO transporta -> Evaluator/LEANDRO_PROXY`
 
-Após um freeze formal da investigação pública, LEANDRO poderá revelar seletivamente conhecimento histórico e contatos.
+Toda mensagem relevante deverá alimentar o Interaction Ledger.
 
-Toda informação histórica deve ser tratada como pista a verificar, e não como fato atual.
+O objetivo é medir a sequência completa, e não apenas o resultado final.
 
-## 7. Interação com o MESTRE
+## 7. Pesquisa independente do Evaluation Lab
 
-Durante o piloto, toda mensagem operacional entre o MESTRE e o lado humano será registrada pelo Evaluation Lab.
+O Evaluation Lab poderá pesquisar a CIAME em paralelo para formar um dataset independente de referência.
 
-Fluxo previsto:
+Esse dataset não poderá ser exposto ao MCF durante a fase isolada.
 
-`Evaluator/Proxy -> LEANDRO -> MESTRE -> LEANDRO -> Evaluator/Proxy`
+Pode conter, conforme protocolo específico:
 
-LEANDRO funcionará como transporte entre chats quando necessário; a avaliação e classificação das interações ficarão centralizadas no Evaluation Lab.
+- presença digital;
+- redes sociais;
+- Google e diretórios;
+- contatos públicos;
+- reputação;
+- jornadas B2C/B2B;
+- observações de atendimento remoto;
+- concorrência;
+- sinais tecnológicos públicos;
+- informações históricas fornecidas por LEANDRO, claramente marcadas como históricas.
 
-## 8. O MESTRE saberá que está sendo avaliado
+## 8. Mystery shopping remoto — planejado
 
-O teste não será secreto.
+Há interesse em medir qualidade e tempo de atendimento por canais como Instagram e WhatsApp, em cenários B2C e B2B e horários diferentes.
 
-O MESTRE deverá ser informado de que:
+Nenhum teste desse tipo começa automaticamente.
 
-- esta é a primeira missão real do MCF;
-- o framework e a equipe estão sob avaliação;
-- deve haver instrumentação interna;
-- o MESTRE deve produzir métricas próprias;
-- haverá comparação entre autoavaliação e avaliação independente.
+O protocolo deverá ser congelado antes e obedecer a `RESEARCH-ETHICS.md`.
 
-## 9. Frentes preliminares do diagnóstico CIAME
+## 9. Avaliação presencial — fase tardia
 
-A estrutura ainda será refinada antes do início, mas deve considerar pelo menos:
+Uma jornada física real de paciente poderá ser avaliada em fase avançada apenas se decorrer de necessidade legítima de atendimento, com consentimento do participante e sem induzir procedimento desnecessário.
 
-1. identidade e posicionamento;
-2. presença digital;
-3. redes sociais;
-4. reputação pública;
-5. jornada B2C;
-6. jornada B2B;
-7. tecnologia observável publicamente;
-8. concorrência e mercado local;
-9. comunicação e atendimento;
-10. experiência do cliente;
-11. oportunidades de software, automação e IA;
-12. solução, protótipo, testes e business case.
+Essa etapa será FIELD OUTCOME/Customer Experience e não deverá ser confundida com a nota técnica inicial do MCF.
 
-## 10. Pesquisa independente do Evaluation Lab
+## 10. Dados históricos de LEANDRO
 
-Enquanto o MCF ainda está em desenvolvimento, LEANDRO + Evaluator podem pesquisar a CIAME em paralelo.
+LEANDRO já possui conhecimento histórico e alguns contatos relacionados à clínica.
 
-Esses dados serão mantidos como **Evaluator Reference Dataset** e não deverão contaminar a fase Blind.
+Essas informações não devem ser tratadas automaticamente como fatos atuais e não devem contaminar a fase isolada.
 
-Posteriormente poderão ser usados para medir Discovery Recall, Factual Precision e Evidence Coverage.
+Quando forem liberadas, deverão ser tratadas como pistas históricas a validar.
 
-## 11. Atendimento remoto como objeto de estudo
+## 11. Bloqueios atuais
 
-Está planejada, mas ainda não autorizada para execução, uma avaliação estruturada de atendimento por canais públicos como Instagram e WhatsApp.
+O Pilot 001 permanece BLOQUEADO até pelo menos:
 
-Possíveis dimensões:
+- MCF READY declarado por LEANDRO;
+- Mission Contract congelado;
+- matriz HUMAN_GATE/LEANDRO_PROXY congelada;
+- ledgers congelados;
+- política de dataset de referência definida;
+- protocolo de pesquisa remota definido;
+- PILOT READY declarado.
 
-- B2C versus B2B;
-- canal;
-- horário;
-- tempo até primeira resposta;
-- utilidade da resposta;
-- cordialidade e clareza;
-- capacidade de resolver ou encaminhar;
-- automação percebida;
-- follow-up.
+## 12. Próxima definição
 
-O protocolo deverá ser congelado antes desses testes.
+Próximo item do Evaluation Lab:
 
-## 12. Experiência física — etapa futura
-
-Como possível etapa final, poderá ser avaliada uma jornada real de paciente na unidade física.
-
-LEANDRO mencionou a possibilidade de observar a experiência de sua mãe caso exista uma necessidade real de atendimento e ela consinta.
-
-Essa etapa não será criada artificialmente apenas para gerar dados. Saúde e necessidade clínica têm prioridade sobre o experimento.
-
-## 13. Gates de fase planejados
-
-Sequência preliminar:
-
-`MISSION START -> RECONNAISSANCE -> EVIDENCE FREEZE -> DIAGNOSTIC -> DIAGNOSTIC FREEZE -> OPPORTUNITY MAP -> SOLUTION DESIGN -> ARCHITECTURE FREEZE -> PROTOTYPE -> TESTING -> BUSINESS CASE -> FINAL AUDIT -> LEANDRO GATE -> CONTACT/PROPOSAL`
-
-A sequência ainda será refinada e congelada antes da missão.
+**criar e congelar o Mission Contract do Pilot 001 sem iniciar a missão.**
