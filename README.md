@@ -7,6 +7,8 @@ Laboratório independente para avaliar, medir e auditar o desempenho do **MCF �
 **Versão de fundação:** v0.1  
 **Status:** preparação do laboratório  
 **Scorecard externo:** v0.1 FROZEN  
+**Mission Contract Pilot 001:** v0.1 FROZEN / NOT AUTHORIZED FOR EXECUTION  
+**Conversation Continuity Protocol:** v1.1 FROZEN  
 **Execução do Pilot 001:** BLOQUEADA até o MCF ser explicitamente declarado pronto por LEANDRO e o protocolo do piloto estar concluído.
 
 ## Propósito
@@ -46,9 +48,7 @@ O Pilot 001 não começou. O período atual é de preparação paralela enquanto
 
 ## Avaliação congelada
 
-O primeiro componente congelado do protocolo é o scorecard externo v0.1.
-
-Ele separa:
+O scorecard externo v0.1 separa:
 
 - `MCF SYSTEM SCORE` — desempenho do framework;
 - `CASE OUTCOME SCORE` — qualidade do trabalho produzido;
@@ -58,6 +58,14 @@ Ele separa:
 - métricas de contexto, intervenção, autoavaliação e Calibration Gap.
 
 Consulte [`docs/SCORECARD-v0.1.md`](docs/SCORECARD-v0.1.md).
+
+## Continuidade da conversa
+
+A interface de continuidade entre **LEANDRO** e o **Assistant / Evaluator** é regida pelo protocolo congelado:
+
+[`docs/CONVERSATION-CONTINUITY-PROTOCOL-v1.1.md`](docs/CONVERSATION-CONTINUITY-PROTOCOL-v1.1.md)
+
+Esse protocolo exige três opções concretas ao final das respostas do Projeto CIAME, preserva a consulta ao estado canônico e não substitui HUMAN_GATE ou qualquer autorização formal do MCF.
 
 ## Fonte canônica
 
@@ -69,7 +77,11 @@ Consulte:
 - [`docs/GOVERNANCE.md`](docs/GOVERNANCE.md)
 - [`docs/EVALUATION-MODEL.md`](docs/EVALUATION-MODEL.md)
 - [`docs/SCORECARD-v0.1.md`](docs/SCORECARD-v0.1.md)
+- [`docs/MISSION-CONTRACT-PILOT-001-v0.1.md`](docs/MISSION-CONTRACT-PILOT-001-v0.1.md)
 - [`docs/PILOT-001-CIAME.md`](docs/PILOT-001-CIAME.md)
 - [`docs/RESEARCH-ETHICS.md`](docs/RESEARCH-ETHICS.md)
+- [`docs/CONVERSATION-CONTINUITY-PROTOCOL-v1.1.md`](docs/CONVERSATION-CONTINUITY-PROTOCOL-v1.1.md)
 - [`docs/checkpoints/CP-0001-GENESIS.md`](docs/checkpoints/CP-0001-GENESIS.md)
 - [`docs/checkpoints/CP-0002-SCORECARD-FREEZE.md`](docs/checkpoints/CP-0002-SCORECARD-FREEZE.md)
+- [`docs/checkpoints/CP-0003-MISSION-CONTRACT-FREEZE.md`](docs/checkpoints/CP-0003-MISSION-CONTRACT-FREEZE.md)
+- [`docs/checkpoints/CP-0004-CONVERSATION-CONTINUITY-FREEZE.md`](docs/checkpoints/CP-0004-CONVERSATION-CONTINUITY-FREEZE.md)
