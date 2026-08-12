@@ -6,10 +6,12 @@ Status: **PLANEJADO / EXECUÇÃO BLOQUEADA**
 
 O Pilot 001 será a primeira missão empresarial real utilizada para avaliar formalmente o MCF.
 
-Alvo:
+Alvo-semente:
 
 **CIAME — Centro Integrado de Atenção Médica**  
 São Lourenço da Mata/PE.
+
+A identidade empresarial concreta do alvo deverá ser resolvida pela própria missão antes da consolidação do corpus factual, seguindo a `Entity Collision Rule` do Mission Contract.
 
 O Case CIAME terá repositório próprio e separado do MCF e do Evaluation Lab.
 
@@ -40,32 +42,44 @@ Estrutura obrigatória:
 - Calibration Gap;
 - FIELD OUTCOME separadamente, quando houver dados reais de campo.
 
-O congelamento está registrado em:
+O congelamento do scorecard está registrado em:
 
 `docs/checkpoints/CP-0002-SCORECARD-FREEZE.md`
 
-## 4. Princípio de missão limpa
+## 4. Mission Contract oficial
 
-O MCF não deverá receber como contexto inicial os diagnósticos, pesquisas ou conclusões produzidos anteriormente pelo Evaluator ou por LEANDRO sobre a CIAME.
+O Mission Contract v0.1 está congelado em:
 
-A missão deverá ser muito bem estruturada, mas estrutura não significa fornecer respostas.
+`docs/MISSION-CONTRACT-PILOT-001-v0.1.md`
 
-O Mission Contract deverá especificar pelo menos:
+Checkpoint:
 
-- objetivo;
-- alvo correto;
-- escopo;
-- resultado esperado;
-- restrições;
-- entregáveis;
-- fontes permitidas;
-- política de evidências;
-- limites de atuação;
-- HUMAN_GATE;
-- definição de pronto;
-- instrumentação mínima da missão.
+`docs/checkpoints/CP-0003-MISSION-CONTRACT-FREEZE.md`
 
-## 5. MCF consciente da avaliação
+O contrato congelado não autoriza execução.
+
+`MISSION START = PROIBIDO` até satisfação das dependências e autorização formal de LEANDRO.
+
+## 5. Princípio de missão limpa
+
+O MCF não deverá receber como contexto inicial diagnósticos, pesquisas ou conclusões produzidos anteriormente pelo Evaluator ou por LEANDRO sobre a CIAME.
+
+A missão será muito bem estruturada, mas estrutura não significa fornecer respostas.
+
+O Pilot 001 é:
+
+- **Target-Intelligence Blind** — respostas sobre o alvo permanecem isoladas;
+- **Evaluation Open-Book** — o framework sabe que está sendo avaliado e os documentos metodológicos públicos não são tratados como segredo.
+
+O bootstrap efetivamente fornecido deverá ser preservado por `Context Fingerprint`.
+
+## 6. Baseline do MCF
+
+Antes de `MISSION START`, será congelado um `Execution Baseline` identificando a versão real do MCF e a configuração relevante da missão.
+
+Mudança material após o início será tratada como `Runtime Mutation` e não poderá ocorrer silenciosamente.
+
+## 7. MCF consciente da avaliação
 
 O MESTRE deverá saber explicitamente que:
 
@@ -73,11 +87,12 @@ O MESTRE deverá saber explicitamente que:
 - este é o primeiro piloto formal do MCF;
 - o framework e a equipe estão sendo avaliados;
 - o próprio MESTRE deve criar métricas internas e instrumentar a execução;
-- a autoavaliação será posteriormente comparada à avaliação externa.
+- suas métricas devem ser pré-registradas em P0;
+- a autoavaliação será congelada antes da revelação da pontuação externa final.
 
 O teste não é oculto.
 
-## 6. Interação com o MESTRE
+## 8. Interação com o MESTRE
 
 Durante a missão, a cadeia operacional planejada é:
 
@@ -85,11 +100,26 @@ Durante a missão, a cadeia operacional planejada é:
 
 Toda mensagem relevante deverá alimentar o Interaction Ledger.
 
+O `Transport Integrity Rule` exige retransmissão integral ou declaração explícita de cortes, resumos ou alterações.
+
 O objetivo é medir a sequência completa, e não apenas o resultado final.
 
-## 7. Pesquisa independente do Evaluation Lab
+## 9. Authorization Envelopes
 
-O Evaluation Lab poderá pesquisar a CIAME em paralelo para formar um dataset independente de referência.
+O Mission Contract divide o piloto em envelopes progressivos:
+
+- **A — Public Research & Internal Build**;
+- **B — Remote Experience Research**;
+- **C — Formal Commercial Contact**;
+- **D — Physical / Private / Production**.
+
+Todos permanecem `LOCKED` enquanto o Pilot não estiver pronto.
+
+O desbloqueio de um envelope não desbloqueia automaticamente os seguintes.
+
+## 10. Pesquisa independente do Evaluation Lab
+
+O Evaluation Lab poderá pesquisar a CIAME em paralelo para formar dataset independente de referência.
 
 Esse dataset não poderá ser exposto ao MCF durante a fase isolada.
 
@@ -106,21 +136,23 @@ Pode conter, conforme protocolo específico:
 - sinais tecnológicos públicos;
 - informações históricas fornecidas por LEANDRO, claramente marcadas como históricas.
 
-## 8. Mystery shopping remoto — planejado
+O mecanismo de armazenamento privado ainda precisa ser definido antes da coleta formal do ground truth.
+
+## 11. Mystery shopping remoto — planejado
 
 Há interesse em medir qualidade e tempo de atendimento por canais como Instagram e WhatsApp, em cenários B2C e B2B e horários diferentes.
 
 Nenhum teste desse tipo começa automaticamente.
 
-O protocolo deverá ser congelado antes e obedecer a `RESEARCH-ETHICS.md`.
+Mystery shopping exige protocolo congelado antes de desbloquear o **ENVELOPE B** e deve obedecer a `RESEARCH-ETHICS.md`.
 
-## 9. Avaliação presencial — fase tardia
+## 12. Avaliação presencial — fase tardia
 
 Uma jornada física real de paciente poderá ser avaliada em fase avançada apenas se decorrer de necessidade legítima de atendimento, com consentimento do participante e sem induzir procedimento desnecessário.
 
 Essa etapa será FIELD OUTCOME/Customer Experience e não deverá ser confundida com a nota técnica inicial do MCF.
 
-## 10. Dados históricos de LEANDRO
+## 13. Dados históricos de LEANDRO
 
 LEANDRO já possui conhecimento histórico e alguns contatos relacionados à clínica.
 
@@ -128,20 +160,40 @@ Essas informações não devem ser tratadas automaticamente como fatos atuais e 
 
 Quando forem liberadas, deverão ser tratadas como pistas históricas a validar.
 
-## 11. Bloqueios atuais
+## 14. Repositório do Case
+
+Antes de `MISSION START`, o Case CIAME deverá possuir repositório próprio.
+
+Durante o período pré-contato, o padrão definido pelo Mission Contract é **privado/restrito**, salvo autorização específica para publicação.
+
+O Case repo não deverá conter:
+
+- código-base do MCF;
+- Evaluator Reference Dataset;
+- credenciais;
+- dados médicos identificáveis;
+- material privado sem necessidade e proteção adequadas.
+
+## 15. Bloqueios atuais
 
 O Pilot 001 permanece BLOQUEADO até pelo menos:
 
 - MCF READY declarado por LEANDRO;
-- Mission Contract congelado;
+- Execution Baseline congelado;
+- Context Fingerprint preservado;
 - matriz HUMAN_GATE/LEANDRO_PROXY congelada;
 - ledgers congelados;
-- política de dataset de referência definida;
-- protocolo de pesquisa remota definido;
-- PILOT READY declarado.
+- política de armazenamento privado do dataset de referência definida;
+- critérios PILOT READY congelados;
+- repositório privado/restrito do Case CIAME preparado;
+- freeze protocol definido;
+- formato mínimo do relatório final definido;
+- autorização formal de MISSION START por LEANDRO.
 
-## 12. Próxima definição
+O protocolo de mystery shopping é dependência de ENVELOPE B, não de ENVELOPE A.
+
+## 16. Próxima definição
 
 Próximo item do Evaluation Lab:
 
-**criar e congelar o Mission Contract do Pilot 001 sem iniciar a missão.**
+**ELAB-001.3 — congelar matriz HUMAN_GATE e poderes do LEANDRO_PROXY.**
