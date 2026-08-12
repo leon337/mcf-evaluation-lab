@@ -6,7 +6,8 @@ Laboratório independente para avaliar, medir e auditar o desempenho do **MCF �
 
 **Versão de fundação:** v0.1  
 **Status:** preparação do laboratório  
-**Execução do Pilot 001:** BLOQUEADA até o MCF ser explicitamente declarado pronto por LEANDRO.
+**Scorecard externo:** v0.1 FROZEN  
+**Execução do Pilot 001:** BLOQUEADA até o MCF ser explicitamente declarado pronto por LEANDRO e o protocolo do piloto estar concluído.
 
 ## Propósito
 
@@ -43,6 +44,21 @@ O primeiro piloto planejado é o **CASE CIAME**, referente à CIAME — Centro I
 
 O Pilot 001 não começou. O período atual é de preparação paralela enquanto LEANDRO conclui o MCF.
 
+## Avaliação congelada
+
+O primeiro componente congelado do protocolo é o scorecard externo v0.1.
+
+Ele separa:
+
+- `MCF SYSTEM SCORE` — desempenho do framework;
+- `CASE OUTCOME SCORE` — qualidade do trabalho produzido;
+- `FIELD OUTCOME` — resultados reais observados em campo, mantidos separadamente;
+- `CRITICAL_GATES` — falhas não compensáveis por média numérica;
+- `Measurement Confidence` — confiança na qualidade da medição;
+- métricas de contexto, intervenção, autoavaliação e Calibration Gap.
+
+Consulte [`docs/SCORECARD-v0.1.md`](docs/SCORECARD-v0.1.md).
+
 ## Fonte canônica
 
 A partir do checkpoint de fundação, decisões sobre o Evaluation Lab devem ser registradas neste repositório. Memória de chat não é fonte operacional de verdade.
@@ -52,11 +68,8 @@ Consulte:
 - [`docs/CHARTER.md`](docs/CHARTER.md)
 - [`docs/GOVERNANCE.md`](docs/GOVERNANCE.md)
 - [`docs/EVALUATION-MODEL.md`](docs/EVALUATION-MODEL.md)
+- [`docs/SCORECARD-v0.1.md`](docs/SCORECARD-v0.1.md)
 - [`docs/PILOT-001-CIAME.md`](docs/PILOT-001-CIAME.md)
 - [`docs/RESEARCH-ETHICS.md`](docs/RESEARCH-ETHICS.md)
-- [`docs/DATA-ISOLATION.md`](docs/DATA-ISOLATION.md)
 - [`docs/checkpoints/CP-0001-GENESIS.md`](docs/checkpoints/CP-0001-GENESIS.md)
-
-## Próxima unidade de trabalho
-
-A preparação e o congelamento do protocolo v0.1 são acompanhados pela **Issue #1 — ELAB-001**.
+- [`docs/checkpoints/CP-0002-SCORECARD-FREEZE.md`](docs/checkpoints/CP-0002-SCORECARD-FREEZE.md)
