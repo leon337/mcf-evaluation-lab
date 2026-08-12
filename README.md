@@ -54,4 +54,9 @@ Consulte:
 - [`docs/EVALUATION-MODEL.md`](docs/EVALUATION-MODEL.md)
 - [`docs/PILOT-001-CIAME.md`](docs/PILOT-001-CIAME.md)
 - [`docs/RESEARCH-ETHICS.md`](docs/RESEARCH-ETHICS.md)
+- [`docs/DATA-ISOLATION.md`](docs/DATA-ISOLATION.md)
 - [`docs/checkpoints/CP-0001-GENESIS.md`](docs/checkpoints/CP-0001-GENESIS.md)
+
+## Próxima unidade de trabalho
+
+A preparação e o congelamento do protocolo v0.1 são acompanhados pela **Issue #1 — ELAB-001**.
