@@ -108,3 +108,25 @@ Exigem decisão direta de LEANDRO:
 Embora possam ser operados pelo mesmo ChatGPT, `EVALUATOR` e `LEANDRO_PROXY` são papéis logicamente separados.
 
 Toda ação do proxy deve ser registrada em ledger próprio e considerada na avaliação de autonomia. O Evaluator não pode usar o papel de proxy para orientar ocultamente o MCF.
+
+## 8. Protocolo de continuidade LEANDRO ↔ Evaluator
+
+A continuidade normal da conversa entre LEANDRO e o Assistant/Evaluator é regida por:
+
+`docs/CONVERSATION-CONTINUITY-PROTOCOL-v1.1.md`
+
+Esse protocolo:
+
+- organiza opções de continuidade da conversa;
+- exige consulta ao estado canônico quando disponível;
+- torna explícita a recomendação e consequência de cada caminho;
+- fornece resposta copiável para LEANDRO;
+- não substitui HUMAN_GATE;
+- não amplia poderes do LEANDRO_PROXY;
+- não concede autorização automática para ações operacionais.
+
+Escolher uma `Continuity Option` não deve ser contabilizado como HUMAN_GATE, salvo quando a própria decisão também satisfizer formalmente os critérios de um HUMAN_GATE previsto pela governança.
+
+A versão v1.1 foi congelada em:
+
+`docs/checkpoints/CP-0004-CONVERSATION-CONTINUITY-FREEZE.md`
